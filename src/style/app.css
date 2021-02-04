@@ -1,5 +1,15 @@
 .main-page {
-  width: 100%;
+  padding: 8px;
+  margin-top: 0;
+  position: relative;
+  z-index: 5;
+  background: #f1f1f1;
+
+  transition: 0.2s ease-out;
+}
+
+.main-page-closed {
+  margin-top: 200px;
 }
 
 .cal-item {
@@ -11,11 +21,14 @@
 
   text-align: center;
 
-  background: #f1f1f1;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgb(0, 0, 0,0.1);
+
+  transition: 0.1s;
 }
 
 .cal-item-today {
-  background:  #5f9fe7;
+  background:  #353535;
   color: #f1f1f1;
 }
 
@@ -52,11 +65,11 @@
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 .content-item {
-  margin: 5px 5px 5px 5px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
 
   overflow: hidden;
@@ -64,6 +77,12 @@
   
   min-height: 50px;
 
+  border-radius: 5px;
+  margin-top: 5px;
+  background: #ffffff;
+  opacity: 1.0;
+
+  box-shadow: 0 0 1px 0 rgb(0, 0, 0, 0.1);
 }
 
 .content-item-time {
@@ -94,6 +113,95 @@
   font-weight: 300;
 }
 
+.main-page-content-wrpper {
+  width: 100%;
+  height: calc(100vh - 93px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-page-content {
+  margin: 10px 0 5px 0;
+  border-radius: 5px;
+}
+
+.main-page-content-header {
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: #929292;
+}
+
+#mainpage {
+  opacity: 1.0;
+  transition: 0.1s;
+}
+
+#mainpage[down] {
+  opacity: 0.0;
+}
+
+.main-page-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: #95a3d3;
+  border-radius: 0 0 0 60px;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s ease-out;
+}
+
+.main-page-info-closed {
+  top: -200px;
+}
+
+.main-page-info-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: 800;
+  color: #ffffff;
+
+  font-size: 1.5em;
+}
+
+.main-page-info-reconnect {
+  text-transform: uppercase;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  user-select: none;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background: #4c62aa;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+
+  font-size: 0.6em;
+
+  font-weight: 600;
+}
+
+.info-text-up {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.info-text-main {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #ffffff;
+}
 
 
 
